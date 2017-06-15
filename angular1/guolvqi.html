@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='myApp'>
+<head>
+	<meta charset="UTF-8">
+	<title>过滤器</title>
+	<script src="js/angular-1.5.8.js"></script>
+</head>
+<body ng-controller='myCtrl'>
+	<simple-directive></simple-directive>
+	<div>
+		<p>货币过滤器</p>
+		<p>{{1234 | currency}}</p> <!-- 默认添加$,并且四舍五入的保留两位小数 -->
+		<p>{{1234 | currency:'RMB ￥'}}</p>
+	</div>
+	<!-- <div>
+		<p>日期date过滤器</p>
+		<p>时间戳：{{510809135555 | date}}</p>
+		<p>{{today}}</p>
+		<p>{{today | date}}</p>
+		<p>{{today | date:"yyyy-MM-dd hh:mm:ss"}}</p>
+		<p>{{today | date:"yy-MM-dd hh:mm:ss EEEE"}}</p>
+		<p>{{today | date:"yy-MM-dd:HH:mm:ss EEEE"}}</p>
+		<p>{{today | date:"y-M-d:HH:mm:ss EEEE"}}</p>
+	</div>
+	<div>
+		<p></p>
+	</div> -->
+</body>
+	<script>
+		angular.module('myApp',[])
+			.controller('myCtrl',['$scope',function($scope){
+					//加一个时间函数
+					$scope.today=new Date();
+			}])
+			.directive("simpleDirective",function(){  
+				return{   
+					restrict:'AECM',   
+					replace:false,   
+					transclude:false,  
+					template:'<div> Hi Directive </div>'   +'<div ><div ng-transclude></div>So Happy</div>'                 
+					 // template:'<div> Hi Directive </div>'   +'<div  ng-transclude >So Happy</div>'   
+ } 
+}) 
+	</script>
+</html>

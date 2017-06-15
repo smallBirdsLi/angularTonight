@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>angular</title>
+	<script src="js/angular-1.5.8.js"></script>
+	<script src="js/many.js"></script>
+	<script src="js/service.js"></script>
+	<!-- <script src="js/connect.js"></script> -->
+</head>
+<body ng-app='first'>
+	<div ng-controller='first-one'>
+		<p>{{person.name}}</p>
+		<p>{{person.age}}</p>
+	</div>
+	<div ng-controller='second-one'>
+		<p>{{person1.name1}}</p>
+		<p>{{person1.age1}}</p>
+	</div>
+	<div ng-controller='third'>
+		<p>{{favorite}}</p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,1 @@
+var all=angular.module('first',['first','second'])
