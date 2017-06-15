@@ -1,0 +1,19 @@
+﻿#帮助命令
+git --help
+
+#配置用户名
+git config --global user.name 'your username'
+#配置用户邮箱
+git config --global user.email 'your email'
+#查看配置信息
+git config --list
+
+#新建本地仓库
+git init 仓库名称（如果不写就是当前的目录）
+git clone 远程仓库的地址
+
+#文件操作
+git status #查看文件状态
+git add 文件名... #将文件添加到暂存区
+git rm --cached 文件名... #将文件从暂存区移除
+git commit -m 'commit message' #将文件从暂存区提交到git仓库
